@@ -21,7 +21,7 @@ import SidebarOption from './SidebarOption';
 import { auth, db } from '../../firebase';
 
 const Sidebar = (props) => {
-  const [channels, loading, error] = useCollection(db.collection('rooms'));
+  const [channels] = useCollection(db.collection('rooms'));
 
   const [user] = useAuthState(auth);
 
